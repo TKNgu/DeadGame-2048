@@ -14,3 +14,6 @@ Công cụ đóng gói file thực thi [AppImage](https://appimage.org/)
 Một số hình ảnh của trò chơi.
 
 -- Cập nhật sau --
+
+# 21-10-2018
+Thêm bản build AppImage

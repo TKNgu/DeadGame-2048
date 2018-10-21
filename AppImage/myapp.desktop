@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=HelloAppImage
+Exec=DeadGame-2048
+Icon=HelloAppImage
+Type=Application
+Terminal=false
+Categories=GTK;GNOME;Utility;
