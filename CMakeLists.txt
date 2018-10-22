@@ -20,6 +20,7 @@ add_executable(${PROJECT} ${SOURCES})
 target_link_libraries(${PROJECT} sfml-graphics sfml-window)
 
 add_custom_target(AppImage)
+add_dependencies(AppImage ${PROJECT})
 add_custom_command(TARGET AppImage
                      COMMAND ${CMAKE_COMMAND} -E
                          copy_directory ${CMAKE_SOURCE_DIR}/AppImage AppImage)

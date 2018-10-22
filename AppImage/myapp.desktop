@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=HelloAppImage
+Comment=An open-source GUI prototyping tool that is available for ALL platforms.
 Exec=DeadGame-2048
-Icon=HelloAppImage
-Type=Application
 Terminal=false
-Categories=GTK;GNOME;Utility;
+Type=Application
+Icon=HelloAppImage
+Categories=Graphics;
