@@ -1,3 +1,6 @@
 [submodule "SFML"]
 	path = SFML
 	url = https://github.com/SFML/SFML
+[submodule "AppImageUpdate"]
+	path = AppImageUpdate
+	url = https://github.com/AppImage/AppImageUpdate
