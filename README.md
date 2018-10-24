@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/TKNgu/DeadGame-2048.svg?branch=master)](https://travis-ci.org/TKNgu/DeadGame-2048)
+
 # DeadGame-2048
 Một bản đơn giản của trò chơi 2048.
 
