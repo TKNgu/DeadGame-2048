@@ -24,6 +24,7 @@ add_executable(${PROJECT} ${SOURCES})
 target_link_libraries(${PROJECT} sfml-system sfml-graphics sfml-window appimageupdate)
 
 # Build AppImage.
+set(UPDATE "gh-releases-zsync|TKNgu|DeadGame-2048|latest|DeadGame-2048-x86_64.AppImage.zsync")
 add_custom_target(AppImage)
 add_dependencies(AppImage ${PROJECT})
 add_custom_command(TARGET AppImage
@@ -39,4 +40,4 @@ add_custom_command(TARGET AppImage
                      COMMAND ${CMAKE_COMMAND} -E
                          copy_directory ${CMAKE_SOURCE_DIR}/usr/lib AppImage/lib)
 add_custom_command(TARGET AppImage
-                     COMMAND ${CMAKE_SOURCE_DIR}/tool/appimagetool-x86_64.AppImage AppImage/)
+                     COMMAND ${CMAKE_SOURCE_DIR}/tool/appimagetool-x86_64.AppImage AppImage/ -u \"gh-releases-zsync|TKNgu|DeadGame-2048|latest|DeadGame-2048-x86_64.AppImage.zsync\")
