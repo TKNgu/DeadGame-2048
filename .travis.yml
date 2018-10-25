@@ -1,16 +1,14 @@
 language: cpp
 
-sudo: required
-dist: trusty
-language: cpp
-compiler: g++
-install: export CXX="g++-5"
+before_install:
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - ubuntu-toolchain-r-test
     packages:
-    - g++-5
+      - gcc-4.9
+      - g++-4.9
 
 compiler:
   - gcc
