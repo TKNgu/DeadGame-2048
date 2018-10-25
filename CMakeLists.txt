@@ -21,7 +21,7 @@ link_directories(${CMAKE_SOURCE_DIR}/usr/lib)
 # Build exec file.
 project(${PROJECT})
 add_executable(${PROJECT} ${SOURCES})
-target_link_libraries(${PROJECT} sfml-system sfml-graphics sfml-window appimageupdate)
+target_link_libraries(${PROJECT} sfml-system sfml-graphics sfml-window foo)
 
 # Build AppImage.
 set(UPDATE "gh-releases-zsync|TKNgu|DeadGame-2048|latest|DeadGame-2048-x86_64.AppImage.zsync")
