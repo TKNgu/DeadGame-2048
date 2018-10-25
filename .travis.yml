@@ -1,14 +1,14 @@
 language: cpp
 
 before_install:
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-5.4" CC="gcc-5.4"; fi
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - gcc-4.9
-      - g++-4.9
+      - gcc-5.4
+      - g++-5.4
 
 compiler:
   - gcc
@@ -17,8 +17,8 @@ before_script:
   - dir
   - pwd
   - ls
-  - g++ -c src/main.cpp -Iinclude -std=c++11 -Iusr/include
-  - g++ -c src/Game2048.cpp -Iinclude -std=c++11 -Iusr/include
+  - g++ -c src/main.cpp -Iinclude -std=c++14 -Iusr/include
+  - g++ -c src/Game2048.cpp -Iinclude -std=c++14 -Iusr/include
   - g++ -o main main.o Game2048.o -L./usr/lib -lsfml-system -lsfml-window -lsfml-graphics -lfoo -std=c++14
   - mkdir build
   - cd build
