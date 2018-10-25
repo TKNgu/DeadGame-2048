@@ -11,7 +11,7 @@ addons:
       - g++-5.4
 
 compiler:
-  - gcc
+  - gcc-5.4
 
 before_script:
   - dir
