@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 #include "Game2048.hpp"
-#include "Foo.hpp"
 
 #define SIZE 4
 
