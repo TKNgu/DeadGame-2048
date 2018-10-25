@@ -23,6 +23,9 @@ compiler:
   - gcc
 
 before_script:
+  - dir
+  - pwd
+  - ls
   - mkdir build
   - cd build
   - cmake ..
