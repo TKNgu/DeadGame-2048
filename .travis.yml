@@ -21,7 +21,7 @@ before_script:
   - ls
   - g++ -c src/main.cpp -Iinclude -std=c++14 -Iusr/include
   - g++ -c src/Game2048.cpp -Iinclude -std=c++14 -Iusr/include
-  - g++ -o main main.o Game2048.o -L./usr/lib -lsfml-system -lsfml-window -lsfml-graphics -lfoo -std=c++14
+  - g++ -o main main.o Game2048.o -L./usr/lib -lsfml-system -lsfml-window -lsfml-graphics -std=c++14
   - mkdir build
   - cd build
   - cmake ..
