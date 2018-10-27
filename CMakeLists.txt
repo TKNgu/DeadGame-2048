@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 # C++ std 14
-set(CMAKE_CXX_STANDARD 14)
+#set(CMAKE_CXX_STANDARD 14)
 
 # Project DeadGame-2048
 set(PROJECT DeadGame-2048)
