@@ -16,7 +16,7 @@ include_directories(include)
 include_directories(lib)
 
 # External lib.
-link_directories(${CMAKE_SOURCE_DIR}/usr/lib)
+link_directories(${CMAKE_SOURCE_DIR}/local/lib)
 
 # Build exec file.
 project(${PROJECT})

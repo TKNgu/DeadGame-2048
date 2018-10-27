@@ -1,20 +1,43 @@
+
+# System
 language: cpp
-compiler: gcc
+compiler: g++
 dist: trusty
 
+# Install
 addons:
   apt:
-    sources:
-    - ubuntu-toolchain-r-test
+    sources: ubuntu-toolchain-r-test
     packages:
-    - g++-5
+      - g++-5
+install: "[ $CXX = g++ ] && export CXX=g++-5 || true"
 
-install:
-  - "[ $CXX = g++ ] && export CXX=g++-5 || true"
-  - "[ $CC = gcc ] && export CC=gcc-5 || true"
+# Brack config.
+branches:
+  only:
+  - master
+  - beta
+  - release
 
+# Git config.
+git:
+  depth: false
+  quiet: true
+  submodules: false
+
+# Script
 script:
   - mkdir build
   - cd build
   - cmake ../
-  - make
+  - make release
+
+# Deploy
+before_deploy: git tag 0.0.1
+deploy:
+  on:
+    repo: TKNgu/DeadGame-2048
+  provider: releases
+  api_key:
+    secure: csRHLN8Xjo8vonW7vz1QYUsuK0OS4dmgrYoUdZz6ov7t0jRLV1j5s8ywdyWC/cKSK9SbuV4WDONmVUVTq32ZmCnoe+oRSpAyZgXnpz2z0CYYkNix6GJluifMMN1SO1CRcnDerbIWMdv2P/nYDOyGQns5kqOZKN51z+a4gHAXluC6RceDLcdhmBE7U1Vrb63c7AzhT1wQJ9rYoO4x4QgzssjdxOYIP38zKqF3aslJ9wkCty/2/n+YXv8RWaXRfOtpkWOKBUHU+gi4ml+5IbWursPq4uG+JcRMhDT09OzvhLt0mACzurOuZ60pubVvDDNRBlUvBBbUQ66KN29vPL+vojARbBRtWI1vR49fBZYpoOf0PP7LjdoamX43KC+/pwbz9+G55oACnnUu1lJ/Ep+blwdBgSL8WAHA+K8vvui4WZwywzcVOAE1Cw+W6lhNfkZIHrEB1l18975r+n+aWv2LoqjBaVGCTH3yntgSiprqy+p1C8N8epSfuMQ9G+0UcBkS2MjPr1czp+JeSZEzryA4nJRdgW1hG1WWA2iywNuCu46WdhD/9f0sBXc5mL+7lgnGvHZiI0bY/8cwAZnVndkJbHjzc/hCwljmAIYo5dXBKiQ5K1McTDJgBo6G4cVcqdEtwsyNhoi5GJ6MHIVbg7cwmCaq6DDOoscE8QYIY+GHHWI=
+  file: DeadGame-2048
