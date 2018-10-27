@@ -11,7 +11,7 @@ set(PROJECT DeadGame-2048)
 file(GLOB SOURCES "src/*.cpp" "src/*.c")
 
 # Header file.
-include_directories(${CMAKE_SOURCE_DIR}/usr/include)
+include_directories(${CMAKE_SOURCE_DIR}/local/include)
 include_directories(include)
 include_directories(lib)
 
