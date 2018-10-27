@@ -23,6 +23,9 @@ project(${PROJECT})
 add_executable(${PROJECT} ${SOURCES})
 target_link_libraries(${PROJECT} sfml-system sfml-graphics sfml-window)
 
+add_custom_target(release)
+add_dependencies(release ${PROJECT})
+
 # Build AppImage.
 set(UPDATE "gh-releases-zsync|TKNgu|DeadGame-2048|latest|DeadGame-2048-x86_64.AppImage.zsync")
 add_custom_target(AppImage)
