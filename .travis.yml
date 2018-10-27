@@ -9,8 +9,8 @@ addons:
   apt:
     sources: ubuntu-toolchain-r-test
     packages:
-      # - g++-5
-# install: "[ $CXX = g++ ] && export CXX=g++-5 || true"
+      - g++-5
+install: "[ $CXX = g++ ] && export CXX=g++-5 || true"
 
 # Brack config.
 branches:
