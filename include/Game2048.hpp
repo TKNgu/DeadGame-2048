@@ -1,6 +1,8 @@
 #ifndef __GAME_2048_HPP__
 #define __GAME_2048_HPP__
 
+#define _GLIBCXX_USE_CXX11_ABI 0
+
 #include <cstring>
 #include <cstdint>
 #include <ctime>
