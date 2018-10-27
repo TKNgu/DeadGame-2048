@@ -2,27 +2,19 @@ language: cpp
 compiler: gcc
 dist: trusty
 
-before_install:
-  # C++14
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-5
 
-install: 
-  # C++14
-  - sudo apt-get install -qq g++-5
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+install:
+  - "[ $CXX = g++ ] && export CXX=g++-5 || true"
+  - "[ $CC = gcc ] && export CC=gcc-5 || true"
 
-before_script:
-  - g++ --version
-  - sudo unlink /usr/bin/g++ && sudo ln -s /usr/bin/g++-5 /usr/bin/g++
-  - g++ --version
-  - dir
-  - pwd
-  - ls
-  - cd SFML
+script:
   - mkdir build
   - cd build
-  - cmake ..
-
-script: 
+  - cmake ../
   - make
