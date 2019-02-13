@@ -17,6 +17,9 @@ Một số hình ảnh của trò chơi.
 
 -- Cập nhật sau --
 
+# 12-02-2019
+Sửa file cmake build tao ra file thực thi chạy luôn.
+
 # 21-10-2018
 Thêm bản build AppImage
 
